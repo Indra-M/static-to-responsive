@@ -50,17 +50,20 @@
     /*The widths are in a percentage!*/
     
     header {
-        align-items: flext-start;
-        display: flex;
+        align-items: flex-start;
         border-bottom: 3px solid #77a466;
+        display: flex;
+        flex-wrap: nowrap;
         justify-content: flex-start;
         margin: 0 auto;
         width: 90%;
     }
     
     header h1 {
-        margin: 0;
+        border-bottom: 30px;
         padding: 38px 0;
+        width: 60%;
+        text-align: left;
     }
     
     header h1 span {
@@ -69,12 +72,14 @@
     
     header nav {
         float: right;
-        padding: 46px 0;
+        padding: 70px 0;
     }
     
     header nav ul {
-        margin: 0;
-        padding: 0;
+        align-content: space-between;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 40%;
     }
     
     header nav ul li {
@@ -109,8 +114,8 @@
     }
     
     .main-image img {
-        width: 90%;
         border-bottom: 3px solid #77a466;
+        width: 90%;
     }
     
     .main-title {
@@ -181,9 +186,9 @@
         border-top: 3px solid #eee;
         display: flex;
         justify-content: center;
-        height: 20px;
+        height: 70px;
         margin: 0 auto;
-        padding-top: 30px;
+        padding: 30 0 30 0;
         text-align: center;
         width: 90%;
     }
@@ -204,26 +209,39 @@
             justify-content: center;
             max-width: 767px;
             margin: 0 auto;
-            width: 70%;
+            width: 90%;
         }
         header {
             align-items: center;
-            border-bottom: 3px solid #77a466;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            height: 250px;
             margin: 0 auto;
             width: 90%;
         }
         header h1 {
+            border-bottom: 3px solid #77a466;
             margin: 0;
             padding: 20px 0 5px 0;
             text-align: center;
         }
         header nav {
             font-size: .60em;
-            padding: 20px 0;
             text-align: center;
+        }
+        header nav ul {
+            align-content: center;
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            height: 20px;
+            justify-content: center;
+        }
+        header nav ul li a {
+            height: 100px;
+            line-height: 20px;
+            padding-left: 90px;
         }
         h1 {
             font-size: 1.48em;
@@ -248,16 +266,25 @@
             justify-content: flex-start;
             margin: 0 auto;
         }
+        .section-two {
+            align-content: flex-start;
+            align-items: flex-start;
+            border: 1px solid #eee;
+            display: flex;
+            flex-flow: nowrap;
+            justify-content: flex-start;
+            height: 140px;
+            width: 90%;
+        }
         .section-one,
-        .section-two,
         .section-three {
             align-content: flex-start;
             align-items: flex-start;
             border: 1px solid #eee;
             display: flex;
-            flex-flow: wrap;
+            flex-flow: nowrap;
             justify-content: flex-start;
-            height: 150px;
+            height: 90px;
             width: 90%;
         }
         h3 {
@@ -300,38 +327,68 @@
             width: 90%;
         }
         footer span {
-            font-family: 'Galada', cursive;
-            text-transform: lowercase;
-            color: #77a466;
             font-size: .80em;
         }
     }
     /*---------- TABLET ----------*/
     
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1200px) {
         .container {
             align-items: center;
             display: flex;
             flex-flow: column;
             justify-content: center;
             margin: 0 auto;
-            max-width: 1024px;
+            max-width: 1200px;
             width: 90%
+        }
+        header {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 250px;
+            margin: 0 auto;
+            width: 90%;
+        }
+        header h1 {
+            border-bottom: 3px solid #77a466;
+            font-size: 2.5em;
+            margin: 0;
+            padding: 20px 0 5px 0;
+            text-align: center;
+        }
+        header nav {
+            font-size: .95em;
+            text-align: center;
+        }
+        header nav ul {
+            align-content: center;
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            height: 20px;
+            justify-content: center;
+        }
+        header nav ul li a {
+            height: 100px;
+            line-height: 22px;
+            padding-left: 270px;
         }
         .section-one {
             width: 30%;
             height: 390px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgb(35, 218, 65);
         }
         .section-two {
             width: 30%;
             height: 390px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgb(35, 218, 65);
         }
         .section-three {
             width: 30%;
             height: 390px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgb(35, 218, 65);
         }
         footer {
             align-items: center;
